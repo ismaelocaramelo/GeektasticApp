@@ -1,0 +1,39 @@
+{
+  "name": "wdi-project-4-client",
+  "description": "App",
+  "main": "index.js",
+  "authors": [
+    "Ismael Bakkali <ismaelbacha@hotmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "materialize": "^0.98.0",
+    "angular-ui-router": "^0.3.2",
+    "angular-resource": "^1.5.9",
+    "angular-jwt": "^0.1.9",
+    "ng-file-upload": "^12.2.13",
+    "angular-video-bg": "^0.3.4",
+    "ngModal": "^1.2.2"
+  },
+  "overrides": {
+    "materialize": {
+      "main": [
+        "bin/materialize.css",
+        "bin/materialize.js",
+        "fonts/**"
+      ]
+    }
+  },
+  "resolutions": {
+    "angular": "1.6.4"
+  }
+}

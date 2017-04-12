@@ -1,0 +1,32 @@
+<html ng-app="GeekTastic">
+<head>
+  <meta charset="utf-8">
+  <title>Angular Stack Setup</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+  <!-- inject:js -->
+  <script src="/js/app.js"></script>
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- endinject -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<base href="/">
+<body ng-controller="MainCtrl as main">
+  <h1>Post</h1>
+
+  <div class="" ng-repeat="post in main.data">
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">{{post.title}}</h4>
+        <p class="card-text">{{post.body}}</p>
+        <p class="card-text">{{main.getUserById(post.userId).name}}</p>
+        <a href="mailto:{{main.getUserById(post.userId).email}}?Subject=Hello%20again" target="_top" class="card-link">{{main.getUserById(post.userId).email}}</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
